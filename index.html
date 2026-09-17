@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guided Experience | Building Information Modelling v2022</title>
+  <style>
+    :root {
+      --ot-blue: #0075fc;
+      --ot-cobalt: #001889;
+      --ot-navy: #0b1224;
+      --ot-ink: #111827;
+      --ot-muted: #5b6578;
+      --ot-line: #d9e0ea;
+      --ot-paper: rgba(255,255,255,.96);
+      --ot-yellow: #e1bc36;
+      --shadow: 0 18px 50px rgba(11,18,36,.22);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body {
+      font-family: Inter, "Segoe UI", Helvetica, Arial, sans-serif;
+      color: var(--ot-ink);
+      background: #0b1224;
+    }
+
+    .stage {
+      min-height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+    .bg {
+      position: fixed;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(11,18,36,.35), rgba(11,18,36,.72)),
+        url("https://app.teamwalnut.com/assets/api/assets?name=6236e8df-4e8b-4883-bac1-fe618f9a85c3/8729ad7e-5898-4d0a-b89f-bc125e869b05:top_2046x1110")
+          center / cover no-repeat,
+        radial-gradient(circle at 20% 10%, #1c3a8a 0%, #0b1224 55%);
+      filter: saturate(1.05);
+    }
+    .bg::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(11,18,36,.55) 0%, rgba(11,18,36,.18) 48%, rgba(11,18,36,.6) 100%);
+    }
+
+    .shell {
+      position: relative;
+      z-index: 2;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 28px 22px 80px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 22px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #fff;
+      text-decoration: none;
+    }
+    .mark {
+      width: 34px; height: 34px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--ot-blue), var(--ot-cobalt));
+      display: grid; place-items: center;
+      color: #fff; font-weight: 800; letter-spacing: -.04em;
+      box-shadow: 0 8px 18px rgba(0,117,252,.35);
+    }
+    .brand strong { font-size: 18px; letter-spacing: -.03em; }
+    .pill {
+      background: rgba(255,255,255,.14);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,.22);
+      border-radius: 999px;
+      padding: 7px 12px;
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .hero {
+      background: var(--ot-paper);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+      padding: 34px 36px 30px;
+      backdrop-filter: blur(10px);
+    }
+    .kicker {
+      color: var(--ot-blue);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      margin: 0 0 8px;
+    }
+    h1 {
+      margin: 0 0 6px;
+      font-size: clamp(26px, 3.2vw, 38px);
+      line-height: 1.15;
+      letter-spacing: -.03em;
+    }
+    .sub {
+      margin: 0 0 18px;
+      color: var(--ot-muted);
+      font-weight: 600;
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 22px;
+    }
+    p { color: #334155; line-height: 1.65; margin: 0 0 12px; }
+    .contact a { color: var(--ot-blue); font-weight: 700; }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 22px 0 6px;
+    }
+    .btn {
+      appearance: none;
+      border: 0;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border-radius: 999px;
+      padding: 12px 16px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary {
+      background: var(--ot-blue);
+      color: #fff;
+      box-shadow: 0 10px 20px rgba(0,117,252,.28);
+    }
+    .btn-dark {
+      background: var(--ot-cobalt);
+      color: #fff;
+    }
+    .btn-ghost {
+      background: #eef3fb;
+      color: var(--ot-cobalt);
+    }
+    .play {
+      width: 18px; height: 18px; border-radius: 50%;
+      background: rgba(255,255,255,.2);
+      display: grid; place-items: center;
+      font-size: 11px;
+    }
+
+    .videos {
+      margin-top: 18px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 12px;
+    }
+    .video-card {
+      border: 1px solid var(--ot-line);
+      border-radius: 16px;
+      padding: 14px;
+      background: #f8fbff;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .video-card h3 {
+      margin: 0;
+      font-size: 15px;
+    }
+    .video-card p {
+      margin: 0;
+      font-size: 13px;
+      color: var(--ot-muted);
+      flex: 1;
+    }
+    .video-card .btn { justify-content: center; width: 100%; }
+
+    .section {
+      margin-top: 22px;
+      background: var(--ot-paper);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+      padding: 28px;
+    }
+    .usecases {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 14px;
+    }
+    .case {
+      border: 1px solid var(--ot-line);
+      border-radius: 16px;
+      padding: 16px;
+      background: #fff;
+    }
+    .case h3 { margin: 0 0 8px; font-size: 16px; }
+    .case p { font-size: 14px; margin-bottom: 14px; }
+
+    .find {
+      scroll-margin-top: 24px;
+    }
+
+    .modal {
+      position: fixed; inset: 0; z-index: 50;
+      background: rgba(8,12,24,.72);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .modal.open { display: flex; }
+    .dialog {
+      width: min(920px, 100%);
+      background: #0b1224;
+      color: #fff;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .dialog header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 16px;
+      background: #10182e;
+    }
+    .dialog header strong { font-size: 14px; }
+    .close {
+      background: transparent; color: #fff; border: 0;
+      font-size: 22px; cursor: pointer;
+    }
+    video { width: 100%; display: block; background: #000; aspect-ratio: 16/9; }
+    .tour-copy { padding: 16px 18px 20px; color: #d7deea; font-size: 14px; line-height: 1.6; }
+
+    @media (max-width: 700px) {
+      .hero, .section { padding: 20px; }
+      .topbar { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <div class="stage">
+    <div class="bg"></div>
+    <div class="shell">
+      <div class="topbar">
+        <a class="brand" href="#">
+          <span class="mark">OT</span>
+          <strong>OpenText</strong>
+        </a>
+        <span class="pill">Product preview</span>
+      </div>
+
+      <section class="hero">
+        <p class="kicker">Guided Experience | Building Information Modelling v2022</p>
+        <h1>Guided Experience | Building Information Modelling v2022</h1>
+        <p class="sub">DEMONSTRATION</p>
+
+        <h2>Extended ECM for Government</h2>
+        <p>
+          OpenText™ Extended ECM for Government is a comprehensive digital file solution tailored for modern, digital government administration at all levels.
+          It provides compliant content lifecycle management, facilitates efficient processes, and fosters effective collaboration.
+          Extended ECM for Government empowers public sector organizations to seamlessly transition from paper-based to electronic record files and streamline their business operations.
+          Key features include an inbox, a file plan based on records management, an embedded viewer experience, and dynamic workflow capabilities.
+        </p>
+        <p>
+          In this click-tour, we are looking at Gina Becker, an intake officer to manage an incoming service request, that leads to the creation of a new case. Sophia Wang processes the case and starts a dynamic workflow to get the validation permit validated and approved by various stakeholders.
+        </p>
+        <p class="contact">
+          If you would like a personal demo or if you want to know more about this solution, we would be happy to discuss your requirements with you. Please contact us
+          <a href="https://www.opentext.com/contact" target="_blank" rel="noopener">here</a>.
+        </p>
+
+        <div class="cta-row">
+          <button class="btn btn-primary" onclick="openVideo('tour')">
+            <span class="play">▶</span> Start the tour
+          </button>
+          <a class="btn btn-ghost" href="#use-cases">View use cases</a>
+          <a class="btn btn-ghost" href="#find-out-more">Find out more</a>
+        </div>
+
+        <div class="videos">
+          <article class="video-card">
+            <h3>Product overview</h3>
+            <p>On-demand walkthrough of Extended ECM for Government capabilities.</p>
+            <button class="btn btn-dark" onclick="openVideo('overview')"><span class="play">▶</span> Watch overview</button>
+          </article>
+          <article class="video-card">
+            <h3>Intake officer flow</h3>
+            <p>See how Gina Becker manages an incoming service request.</p>
+            <button class="btn btn-dark" onclick="openVideo('intake')"><span class="play">▶</span> Watch intake</button>
+          </article>
+          <article class="video-card">
+            <h3>Case processing</h3>
+            <p>Sophia Wang creates the eCase and starts dynamic workflow.</p>
+            <button class="btn btn-dark" onclick="openVideo('case')"><span class="play">▶</span> Watch case flow</button>
+          </article>
+          <article class="video-card">
+            <h3>Permit approval</h3>
+            <p>Stakeholder validation, inbox organization, and approval steps.</p>
+            <button class="btn btn-dark" onclick="openVideo('approval')"><span class="play">▶</span> Watch approval</button>
+          </article>
+          <article class="video-card">
+            <h3>Records & file plan</h3>
+            <p>Compliant records management and digital file lifecycle.</p>
+            <button class="btn btn-dark" onclick="openVideo('records')"><span class="play">▶</span> Watch records</button>
+          </article>
+          <article class="video-card">
+            <h3>Embedded viewer</h3>
+            <p>Review documents in place without leaving the government desktop.</p>
+            <button class="btn btn-dark" onclick="openVideo('viewer')"><span class="play">▶</span> Watch viewer</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="use-cases">
+        <h2>Use Cases</h2>
+        <div class="usecases">
+          <article class="case">
+            <h3>Substitution Arrangement (Proxy)</h3>
+            <p>Delegate responsibility to another person, that can act on behalf of someone else.</p>
+            <button class="btn btn-primary" onclick="openVideo('proxy')">Start the demo</button>
+          </article>
+          <article class="case">
+            <h3>Forward documents</h3>
+            <p>Forward incoming mail to departments or users with directive and notice.</p>
+            <button class="btn btn-primary" onclick="openVideo('forward')">Start the demo</button>
+          </article>
+          <article class="case">
+            <h3>Process forwarded documents</h3>
+            <p>View forwarded content, apply meta-information.</p>
+            <button class="btn btn-primary" onclick="openVideo('process')">Start the demo</button>
+          </article>
+          <article class="case">
+            <h3>Create eCase</h3>
+            <p>From the service request, create case and file content.</p>
+            <button class="btn btn-primary" onclick="openVideo('ecase')">Start the demo</button>
+          </article>
+          <article class="case">
+            <h3>Assign eCase</h3>
+            <p>Assign case to the group of case workers.</p>
+            <button class="btn btn-primary" onclick="openVideo('assign')">Start the demo</button>
+          </article>
+          <article class="case">
+            <h3>Receive approval</h3>
+            <p>Case worker starts dynamic workflow from template, with steps and tasks to process and approve content. Organize your Inbox to manage workload.</p>
+            <button class="btn btn-primary" onclick="openVideo('receive')">Start the demo</button>
+          </article>
+          <article class="case">
+            <h3>Approve permit</h3>
+            <p>See how the team oversees their case load and manage incoming requests using repeatable business workspaces.</p>
+            <button class="btn btn-primary" onclick="openVideo('permit')">Start the demo</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="section find" id="find-out-more">
+        <h2>Find out more...</h2>
+        <p>
+          Explore additional on-demand videos above, or contact OpenText to schedule a personal demonstration of Extended ECM for Government and Building Information Modelling workflows.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://www.opentext.com/contact" target="_blank" rel="noopener">Contact OpenText</a>
+          <button class="btn btn-dark" onclick="openVideo('tour')"><span class="play">▶</span> Replay start tour</button>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div class="modal" id="modal" onclick="backdropClose(event)">
+    <div class="dialog">
+      <header>
+        <strong id="videoTitle">Start the tour</strong>
+        <button class="close" onclick="closeVideo()" aria-label="Close">×</button>
+      </header>
+      <video id="player" controls playsinline></video>
+      <div class="tour-copy" id="videoCopy"></div>
+    </div>
+  </div>
+
+  <script>
+    const clips = {
+      tour: {
+        title: "Start the tour",
+        copy: "Guided experience: Gina Becker receives a service request, creates an eCase, and Sophia Wang launches a dynamic workflow for permit validation.",
+        src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+      },
+      overview: {
+        title: "Product overview",
+        copy: "Overview of inbox, file plan, embedded viewer, and dynamic workflow in Extended ECM for Government.",
+        src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+      },
+      intake: {
+        title: "Intake officer flow",
+        copy: "Gina Becker manages an incoming citizen service request from the government desktop.",
+        src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4"
+      },
+      case: {
+        title: "Case processing",
+        copy: "Sophia Wang processes the case and starts a dynamic workflow from a template.",
+        src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4"
+      },
+      approval: {
+        title: "Permit approval",
+        copy: "Stakeholders validate and approve the permit while organizing inbox workload.",
+        src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
+      },
+      records: {
+        title: "Records & file plan",
+        copy: "Compliant records management and file-plan based digital files.",
+        src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
+      },
+      viewer: {
+        title: "Embedded viewer",
+        copy: "Review content in the embedded viewer without leaving the case workspace.",
+        src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"
+      },
+      proxy: {
+        title: "Substitution Arrangement (Proxy)",
+        copy: "Delegate responsibility so another person can act on someone’s behalf.",
+        src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+      },
+      forward: {
+        title: "Forward documents",
+        copy: "Forward incoming mail to departments or users with directive and notice.",
+        src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4"
+      },
+      process: {
+        title: "Process forwarded documents",
+        copy: "View forwarded content and apply meta-information.",
+        src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/VolkswagenGTIReview.mp4"
+      },
+      ecase: {
+        title: "Create eCase",
+        copy: "From the service request, create the case and file content.",
+        src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4"
+      },
+      assign: {
+        title: "Assign eCase",
+        copy: "Assign the case to the group of case workers.",
+        src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+      },
+      receive: {
+        title: "Receive approval",
+        copy: "Start a dynamic workflow from a template and manage tasks in the inbox.",
+        src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
+      },
+      permit: {
+        title: "Approve permit",
+        copy: "Oversee caseload and approve incoming permit requests in a repeatable workspace.",
+        src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
+      }
+    };
+
+    const modal = document.getElementById("modal");
+    const player = document.getElementById("player");
+
+    function openVideo(key) {
+      const clip = clips[key];
+      document.getElementById("videoTitle").textContent = clip.title;
+      document.getElementById("videoCopy").textContent = clip.copy;
+      player.src = clip.src;
+      modal.classList.add("open");
+      player.play().catch(() => {});
+    }
+    function closeVideo() {
+      player.pause();
+      player.removeAttribute("src");
+      player.load();
+      modal.classList.remove("open");
+    }
+    function backdropClose(e) {
+      if (e.target === modal) closeVideo();
+    }
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeVideo();
+    });
+    if (location.hash === "#find-out-more") {
+      document.getElementById("find-out-more").scrollIntoView();
+    }
+  </script>
+</body>
+</html>
