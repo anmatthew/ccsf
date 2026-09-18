@@ -1,40 +1,430 @@
-<header class="ot-sitenav-new sticky-top" data-ot-site-header="">
-   <div class="container">
-      <div class="ot-sitenav-new__inner"><a class="navbar-brand" href="#" data-webcms-ot-header-logo="" data-ot-navbar-brand=""><svg xmlns="http://www.w3.org/2000/svg" class="w-100 h-auto" width="200" height="32" viewBox="0 0 200 32" fill="none">
-               <g clip-path="url(#ot-logo-clip-path)">
-                  <path d="M64.1399 15.9434C64.1399 20.8204 61.3318 26.1042 53.7955 26.1042C48.3674 26.1042 43.416 23.073 43.416 15.9434C43.416 10.0342 47.147 5.48963 54.5347 5.89641C62.4034 6.33818 64.1399 12.4355 64.1399 15.9434ZM50.1038 12.2343C49.404 13.3147 49.1415 14.6137 49.1415 15.9128C49.1415 18.9046 50.6199 21.6121 53.7955 21.6121C56.971 21.6121 58.375 19.1189 58.375 16.1621C58.375 14.0714 57.8589 12.4486 56.7873 11.4382C55.6063 10.3579 54.2766 10.3229 53.463 10.3929C51.8359 10.5022 50.878 11.0402 50.0994 12.2299H50.1038V12.2343Z" fill="#101C2F"/>
-                  <path d="M114.581 8.07472C115.136 7.48424 115.503 7.04247 116.501 6.56133C117.389 6.19391 118.644 5.89648 120.009 5.89648C121.155 5.89648 122.445 6.08019 123.447 6.63569C125.48 7.70731 125.997 9.44378 125.997 12.4356V25.6231H120.345V14.7625C120.345 13.0261 120.31 12.3962 120.087 11.8801C119.646 10.8478 118.648 10.4017 117.537 10.4017C114.546 10.4017 114.546 12.803 114.546 15.2043V25.6231H108.855V6.37762H114.581V8.0791V8.07472Z" fill="#101C2F"/>
-                  <path d="M106.152 20.641C105.631 21.7388 103.952 26.1041 96.5467 26.1041C90.8212 26.1041 86.7927 22.6005 86.7927 16.2845C86.7927 11.6306 89.0847 5.89629 96.6954 5.89629C97.8414 5.89629 101.166 5.75632 103.641 8.4157C106.152 11.1144 106.301 14.8804 106.375 17.0587H92.597C92.562 19.46 93.9267 21.8613 96.9928 21.8613C100.059 21.8613 101.166 19.8274 101.87 18.4627L106.156 20.641H106.152ZM100.501 13.5114C100.391 12.6978 100.243 11.6262 99.4291 10.7776C98.7293 10.0778 97.6577 9.70602 96.6604 9.70602C95.2957 9.70602 94.3335 10.3709 93.778 10.9614C93.0038 11.8099 92.8157 12.6978 92.632 13.5114H100.501Z" fill="#101C2F"/>
-                  <path d="M185.26 10.3709H189.03V6.37743H185.299V2.32275H179.648V6.37743H178.751L176.162 10.3752H179.648V19.53C179.648 21.3758 179.683 22.7448 180.461 23.8908C181.682 25.6623 183.825 25.776 185.78 25.776C186.812 25.776 187.552 25.6667 188.772 25.4786V21.0434L186.738 21.1177C185.225 21.1177 185.225 20.1205 185.26 18.9395V10.3709Z" fill="#101C2F"/>
-                  <path d="M128.827 2.32275H134.478V6.37743H140.352L137.763 10.3752H134.438V18.9395C134.403 20.1205 134.403 21.1177 135.917 21.1177L137.951 21.0434V25.4786C136.73 25.6623 135.991 25.776 134.959 25.776C132.999 25.776 130.856 25.6667 129.64 23.8908C128.866 22.7448 128.827 21.3802 128.827 19.53V2.32275Z" fill="#101C2F"/>
-                  <path d="M194.266 10.3709H193.566V6.96353H192.276V6.37305H195.525V6.96353H194.261V10.3709H194.266ZM199.742 10.3709H199.055L199.077 7.90394L199.112 7.08601L198.92 7.7596L198.102 10.3709H197.476L196.671 7.7596L196.466 7.09913L196.514 7.90394L196.54 10.3709H195.867V6.37742H196.816L197.813 9.53106L198.788 6.37742H199.738V10.3752H199.742V10.3709Z" fill="#101C2F"/>
-                  <path d="M158.163 20.6585L157.082 22.3293C156.068 23.8165 154.161 26.1041 148.702 26.1041C143.243 26.1041 139.127 22.6005 139.127 16.2845C139.127 11.6306 141.419 5.89629 149.03 5.89629C150.176 5.89629 153.5 5.75632 155.976 8.4157C158.487 11.1144 158.635 14.8804 158.71 17.0587H144.932C144.897 19.46 146.082 21.8613 149.148 21.8613C152.214 21.8613 153.142 19.8274 153.846 18.4627L158.167 20.6585H158.163ZM152.831 13.5114C152.722 12.6978 152.573 11.6262 151.759 10.7776C151.06 10.0778 149.988 9.70602 148.991 9.70602C147.626 9.70602 146.664 10.3709 146.108 10.9614C145.334 11.8099 145.146 12.6978 144.962 13.5114H152.831Z" fill="#101C2F"/>
-                  <path d="M177.531 25.6273L170.463 15.4928L176.354 6.37744H169.885L167.103 10.6814L164.103 6.37744H157.634L163.993 15.4928L157.446 25.6273H163.915L167.353 20.3086L171.062 25.6273H177.531Z" fill="#101C2F"/>
-                  <path d="M71.9737 8.07472C72.5161 7.24804 74.2613 5.89648 77.0344 5.89648C81.7627 5.89648 85.0912 9.47877 85.0912 15.9085C85.0912 19.8626 83.6522 26.1042 76.7982 26.1042C74.3356 26.1042 72.4242 24.7352 71.9387 23.926V32.0004H66.2482V6.37762H71.9737V8.0791V8.07472ZM75.814 10.3361C74.7818 10.3361 73.7102 10.7472 72.8966 11.7795C72.083 12.7767 71.7156 14.3251 71.7156 16.0091C71.7156 18.2792 72.3805 19.6526 73.0803 20.4443C73.7364 21.1835 74.7074 21.6078 75.6303 21.6078C78.3991 21.6078 79.6194 18.6904 79.6194 15.8691C79.6194 13.4985 78.9196 10.9878 76.5882 10.4367C76.3302 10.3667 76.0721 10.3317 75.814 10.3317V10.3361Z" fill="#101C2F"/>
-                  <path d="M26.7376 0H5.27017C2.36148 0 0.00390625 2.35757 0.00390625 5.26627V26.7381C0.00390625 29.6468 2.36148 32.0044 5.27017 32.0044H26.742C29.6507 32.0044 32.0083 29.6468 32.0083 26.7381V5.26627C32.0083 2.35757 29.6507 0 26.742 0H26.7376Z" fill="url(#ot-logo-gradient-background)"/>
-                  <path d="M22.4778 13.6466C22.4778 13.4629 22.6309 13.3098 22.8146 13.3098H24.5861C24.6998 13.3098 24.8048 13.253 24.8704 13.1567L26.2176 11.0747C26.3663 10.8517 26.2045 10.5542 25.9333 10.5542H22.8409C22.6528 10.5542 22.5041 10.4011 22.5041 10.2174V8.09605C22.5041 7.90797 22.351 7.75488 22.1673 7.75488H18.9393C18.7512 7.75488 18.6025 7.90797 18.6025 8.09168V13.9965C17.4653 11.8139 15.182 10.318 12.5533 10.318C8.78729 10.318 5.73425 13.3711 5.73425 17.1371C5.73425 20.9031 8.78729 23.9561 12.5533 23.9561C15.1908 23.9561 17.474 22.4602 18.6112 20.2688C18.6287 21.2311 18.725 21.9878 19.1667 22.6395C20.0065 23.8642 21.4849 23.9386 22.8365 23.9386C23.4663 23.9386 23.9344 23.8817 24.6123 23.7768C24.7785 23.7505 24.901 23.6062 24.901 23.44V21.0211C24.901 20.8287 24.7435 20.6756 24.5511 20.6844L23.5013 20.7237C22.456 20.7237 22.4822 20.037 22.4822 19.2191V13.6466H22.4778ZM12.5533 20.1988C10.8649 20.1988 9.4915 18.8298 9.4915 17.1371C9.4915 15.4443 10.8606 14.0753 12.5533 14.0753C14.246 14.0753 15.6151 15.4443 15.6151 17.1371C15.6151 18.8298 14.246 20.1988 12.5533 20.1988Z" fill="white"/>
-               </g>
-               <defs>
-                  <linearGradient id="ot-logo-gradient-background" x1="24.3932" y1="26.6681" x2="5.13458" y2="2.17824" gradientUnits="userSpaceOnUse">
-                     <stop offset="0" stop-color="#00008B"/>
-                     <stop offset="1" stop-color="#1A6AFF"/>
-                  </linearGradient>
-                  <clipPath id="ot-logo-clip-path">
-                     <rect width="199.742" height="32" fill="white"/>
-                  </clipPath>
-               </defs></svg><span class="sr-only">OpenText home page.</span></a>
-         <nav class="sitenav-right navbar" aria-label="Utility navigation" data-ot-sitenav-right=""><a class="nav-link d-flex text-body" href="https://searchopentext.com"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                  <path d="M20.3334 20.3332L15.5836 15.5832M9.66675 17.6665C5.24847 17.6665 1.66675 14.0848 1.66675 9.66651C1.66675 5.24823 5.24847 1.6665 9.66675 1.6665C14.085 1.6665 17.6668 5.24823 17.6668 9.66651C17.6668 14.0848 14.085 17.6665 9.66675 17.6665Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="sr-only">Search OpenText</span></a><a href="#" class="nav-link d-flex text-body" id="footer-locale" data-toggle="modal" data-target="#language-modal"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                  <path d="M2.33341 6.9165C1.9192 6.9165 1.58341 7.25229 1.58341 7.6665C1.58341 8.08072 1.9192 8.4165 2.33341 8.4165V6.9165ZM19.6667 8.4165C20.081 8.4165 20.4167 8.08072 20.4167 7.6665C20.4167 7.25229 20.081 6.9165 19.6667 6.9165V8.4165ZM2.33341 13.5832C1.9192 13.5832 1.58341 13.919 1.58341 14.3332C1.58341 14.7474 1.9192 15.0832 2.33341 15.0832V13.5832ZM19.6667 15.0832C20.081 15.0832 20.4167 14.7474 20.4167 14.3332C20.4167 13.919 20.081 13.5832 19.6667 13.5832V15.0832ZM9.04278 20.0826L9.4589 20.7066L10.7068 19.8744L10.2907 19.2504L9.04278 20.0826ZM6.33342 10.9998H7.08342H6.33342ZM10.2907 2.74929L10.7068 2.12532L9.4589 1.29308L9.04278 1.91705L10.2907 2.74929ZM11.7094 19.2504L11.2933 19.8744L12.5413 20.7066L12.9574 20.0826L11.7094 19.2504ZM15.6668 10.9998H14.9168H15.6668ZM12.9574 1.91705L12.5413 1.29308L11.2933 2.12532L11.7094 2.74929L12.9574 1.91705ZM11.0001 19.5832C6.25964 19.5832 2.41675 15.7403 2.41675 10.9998H0.916748C0.916748 16.5687 5.43121 21.0832 11.0001 21.0832V19.5832ZM19.5834 10.9998C19.5834 15.7403 15.7405 19.5832 11.0001 19.5832V21.0832C16.569 21.0832 21.0834 16.5687 21.0834 10.9998H19.5834ZM11.0001 2.4165C15.7405 2.4165 19.5834 6.25939 19.5834 10.9998H21.0834C21.0834 5.43097 16.569 0.916504 11.0001 0.916504V2.4165ZM11.0001 0.916504C5.43121 0.916504 0.916748 5.43097 0.916748 10.9998H2.41675C2.41675 6.25939 6.25964 2.4165 11.0001 2.4165V0.916504ZM2.33341 8.4165H19.6667V6.9165H2.33341V8.4165ZM2.33341 15.0832H19.6667V13.5832H2.33341V15.0832ZM10.2907 19.2504C8.55668 16.6502 7.08342 13.8152 7.08342 10.9998H5.58342C5.58342 14.2928 7.28739 17.4504 9.04278 20.0826L10.2907 19.2504ZM7.08342 10.9998C7.08342 8.18448 8.55668 5.34947 10.2907 2.74929L9.04278 1.91705C7.28739 4.54923 5.58342 7.7069 5.58342 10.9998H7.08342ZM12.9574 20.0826C14.7128 17.4504 16.4168 14.2928 16.4168 10.9998H14.9168C14.9168 13.8152 13.4435 16.6502 11.7094 19.2504L12.9574 20.0826ZM16.4168 10.9998C16.4168 7.7069 14.7128 4.54923 12.9574 1.91705L11.7094 2.74929C13.4435 5.34947 14.9168 8.18449 14.9168 10.9998H16.4168Z" fill="currentColor"/></svg><span class="sr-only">Choose your country. Current selection is the English US website.</span></a><div class="sitenav-login-dropdown sitenav-dropdown nav-item dropdown"><button id="sitenav-login-button" class="nav-link btn d-flex align-items-center" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                     <path d="M5.66675 18.3332V17.6663C5.66675 15.4572 7.45761 13.6665 9.66675 13.6665H12.3334C14.5426 13.6665 16.3334 15.4572 16.3334 17.6663V18.3332M11.0001 5.6665C9.52732 5.6665 8.33341 6.86041 8.33341 8.33317C8.33341 9.80593 9.52732 10.9998 11.0001 10.9998C12.4728 10.9998 13.6667 9.80593 13.6667 8.33317C13.6667 6.86041 12.4728 5.6665 11.0001 5.6665ZM11.0001 20.3332C5.84542 20.3332 1.66675 16.1545 1.66675 10.9998C1.66675 5.84518 5.84542 1.6665 11.0001 1.6665C16.1547 1.6665 20.3334 5.84518 20.3334 10.9998C20.3334 16.1545 16.1547 20.3332 11.0001 20.3332Z" stroke="#3F4D62" stroke-width="1.5" stroke-linecap="square"/></svg><span class="sitenav-login-text text-truncate ml-1 sr-only" title="My Account">My Account</span></button><ul class="sitenav-login-navbar-dropdown-menu sitenav-dropdown-menu dropdown-menu collapse" aria-labelledby="sitenav-login-button">
-                  <li><a class="dropdown-item" href="https://login.otiam.opentext.com/login.do">Login</a></li>
-                  <li><a class="dropdown-item" href="https://www.opentext.com/login">Cloud logins</a></li>
-                  <li><a class="dropdown-item" href="https://support.opentext.com/csm">Get support</a></li>
-                  <li><a class="dropdown-item" href="https://developer.opentext.com/" target="_blank">Developer</a></li>
-               </ul>
-            </div><a class="d-none d-lg-block btn btn-primary-gr btn-sm" href="https://www.opentext.com/contact"><svg xmlns="http://www.w3.org/2000/svg" class="d-xl-none" width="14" height="12" viewBox="0 0 14 12" fill="none">
-                  <path d="M1.3999 3.6002L6.9999 6.80019L12.5999 3.6002M2.1999 1.2002H11.7999C12.2417 1.2002 12.5999 1.55837 12.5999 2.0002V10.0002C12.5999 10.442 12.2417 10.8002 11.7999 10.8002H2.1999C1.75807 10.8002 1.3999 10.442 1.3999 10.0002V2.0002C1.3999 1.55837 1.75807 1.2002 2.1999 1.2002Z" stroke="#F6F7F7"/></svg><span><span class="sr-only-lg-down">Contact</span></span></a></nav>
-         <nav class="sitenav-right navbar d-none" aria-label="Utility navigation2" data-ot-sitenav-right="" data-webcms-ot-edit-page=""><a class="d-none d-lg-block btn btn-primary-gr btn-sm mt-0 d-xl-block" id="edit-this-page" target="_blank" style="top: 100%; right: 0px;">Edit Page</a></nav>
+<!DOCTYPE HTML>
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>IT Solutions for Government | Government Technology Services</title>
+      <style>
+          .iw_container { max-width:800px !important; margin-left: auto !important; margin-right: auto !important; }
+          .iw_stretch { min-width: 100% !important; }
+      </style>
+      <script type="application/ld+json">
+            {"@context":"https://schema.org/","@type":"Corporation","name":"OpenText","url":"https://www.opentext.com/","logo":"https://www.opentext.com/assets/images/opentext-logo-datatype.png","contactPoint":{"@type":"ContactPoint","telephone":"1-800-540-7292","contactType":"customer service","contactOption":"TollFree"},"sameAs":["https://twitter.com/OpenText","https://www.youtube.com/user/opentextcorp","https://www.linkedin.com/company/opentext"]}
+        </script>
+      <link rel="stylesheet" type="text/css" href="https://assets.ot.digital/min/m/v1/css/opentext.min.css">
+      <meta name="twitter:url" content="https://www.opentext.com/solutions/industry/government">
+      <meta name="twitter:title" content="IT Solutions for Government | Government Technology Services">
+      <meta name="og:url" content="https://www.opentext.com/solutions/industry/government">
+      <meta name="og:title" content="IT Solutions for Government | Government Technology Services">
+      <meta name="keywords" content="">
+      <meta name="description" content="Leverage government compliant IT solutions & government technology services so government agencies can modernize, enhance, & optimize workforce productivity.">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+      <meta property="og:type" content="article">
+      <meta property="og:site_name" content="OpenText">
+      <meta property="fb:app_id" content="1122222644457672">
+      <meta property="og:image" content="/assets/images/OT_ShareImage_Facebook.png">
+      <meta property="twitter:image" content="/assets/images/OT_ShareImage_twitter.png">
+      <meta name="google-site-verification" content="xgXvpB-t6peVMr5bEm5lSxQt9vhnFD_ONEU98UeedKc">
+      <link rel="stylesheet" href="/assets/css/inter.css" type="text/css">
+      <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png">
+      <link rel="canonical" href="https://www.opentext.com/solutions/industry/government"/>
+   </head>
+   <body>
+      <div class="iw_viewport-wrapper">
+         <div class="container-fluid iw_section" id="sectionkvay5bdy">
+            <div class="row iw_row iw_stretch" id="rowkvay5bdz">
+               <div class="iw_columns col-lg-12" id="colkvay5be0">
+                  <div class="iw_component" id="iw_comp1635425551077">
+                     <header class="ot-sitenav-new sticky-top" data-ot-site-header="">
+                        <div class="container">
+                           <div class="ot-sitenav-new__inner">
+                              <a class="navbar-brand" href="https://www.opentext.com/" data-ot-navbar-brand="">
+                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-100 h-auto" width="200" height="32" viewBox="0 0 200 32" fill="none">
+                                    <g clip-path="url(#ot-logo-clip-path)">
+                                       <path d="M64.1399 15.9434C64.1399 20.8204 61.3318 26.1042 53.7955 26.1042C48.3674 26.1042 43.416 23.073 43.416 15.9434C43.416 10.0342 47.147 5.48963 54.5347 5.89641C62.4034 6.33818 64.1399 12.4355 64.1399 15.9434ZM50.1038 12.2343C49.404 13.3147 49.1415 14.6137 49.1415 15.9128C49.1415 18.9046 50.6199 21.6121 53.7955 21.6121C56.971 21.6121 58.375 19.1189 58.375 16.1621C58.375 14.0714 57.8589 12.4486 56.7873 11.4382C55.6063 10.3579 54.2766 10.3229 53.463 10.3929C51.8359 10.5022 50.878 11.0402 50.0994 12.2299H50.1038V12.2343Z" fill="#101C2F"/>
+                                       <path d="M114.581 8.07472C115.136 7.48424 115.503 7.04247 116.501 6.56133C117.389 6.19391 118.644 5.89648 120.009 5.89648C121.155 5.89648 122.445 6.08019 123.447 6.63569C125.48 7.70731 125.997 9.44378 125.997 12.4356V25.6231H120.345V14.7625C120.345 13.0261 120.31 12.3962 120.087 11.8801C119.646 10.8478 118.648 10.4017 117.537 10.4017C114.546 10.4017 114.546 12.803 114.546 15.2043V25.6231H108.855V6.37762H114.581V8.0791V8.07472Z" fill="#101C2F"/>
+                                       <path d="M106.152 20.641C105.631 21.7388 103.952 26.1041 96.5467 26.1041C90.8212 26.1041 86.7927 22.6005 86.7927 16.2845C86.7927 11.6306 89.0847 5.89629 96.6954 5.89629C97.8414 5.89629 101.166 5.75632 103.641 8.4157C106.152 11.1144 106.301 14.8804 106.375 17.0587H92.597C92.562 19.46 93.9267 21.8613 96.9928 21.8613C100.059 21.8613 101.166 19.8274 101.87 18.4627L106.156 20.641H106.152ZM100.501 13.5114C100.391 12.6978 100.243 11.6262 99.4291 10.7776C98.7293 10.0778 97.6577 9.70602 96.6604 9.70602C95.2957 9.70602 94.3335 10.3709 93.778 10.9614C93.0038 11.8099 92.8157 12.6978 92.632 13.5114H100.501Z" fill="#101C2F"/>
+                                       <path d="M185.26 10.3709H189.03V6.37743H185.299V2.32275H179.648V6.37743H178.751L176.162 10.3752H179.648V19.53C179.648 21.3758 179.683 22.7448 180.461 23.8908C181.682 25.6623 183.825 25.776 185.78 25.776C186.812 25.776 187.552 25.6667 188.772 25.4786V21.0434L186.738 21.1177C185.225 21.1177 185.225 20.1205 185.26 18.9395V10.3709Z" fill="#101C2F"/>
+                                       <path d="M128.827 2.32275H134.478V6.37743H140.352L137.763 10.3752H134.438V18.9395C134.403 20.1205 134.403 21.1177 135.917 21.1177L137.951 21.0434V25.4786C136.73 25.6623 135.991 25.776 134.959 25.776C132.999 25.776 130.856 25.6667 129.64 23.8908C128.866 22.7448 128.827 21.3802 128.827 19.53V2.32275Z" fill="#101C2F"/>
+                                       <path d="M194.266 10.3709H193.566V6.96353H192.276V6.37305H195.525V6.96353H194.261V10.3709H194.266ZM199.742 10.3709H199.055L199.077 7.90394L199.112 7.08601L198.92 7.7596L198.102 10.3709H197.476L196.671 7.7596L196.466 7.09913L196.514 7.90394L196.54 10.3709H195.867V6.37742H196.816L197.813 9.53106L198.788 6.37742H199.738V10.3752H199.742V10.3709Z" fill="#101C2F"/>
+                                       <path d="M158.163 20.6585L157.082 22.3293C156.068 23.8165 154.161 26.1041 148.702 26.1041C143.243 26.1041 139.127 22.6005 139.127 16.2845C139.127 11.6306 141.419 5.89629 149.03 5.89629C150.176 5.89629 153.5 5.75632 155.976 8.4157C158.487 11.1144 158.635 14.8804 158.71 17.0587H144.932C144.897 19.46 146.082 21.8613 149.148 21.8613C152.214 21.8613 153.142 19.8274 153.846 18.4627L158.167 20.6585H158.163ZM152.831 13.5114C152.722 12.6978 152.573 11.6262 151.759 10.7776C151.06 10.0778 149.988 9.70602 148.991 9.70602C147.626 9.70602 146.664 10.3709 146.108 10.9614C145.334 11.8099 145.146 12.6978 144.962 13.5114H152.831Z" fill="#101C2F"/>
+                                       <path d="M177.531 25.6273L170.463 15.4928L176.354 6.37744H169.885L167.103 10.6814L164.103 6.37744H157.634L163.993 15.4928L157.446 25.6273H163.915L167.353 20.3086L171.062 25.6273H177.531Z" fill="#101C2F"/>
+                                       <path d="M71.9737 8.07472C72.5161 7.24804 74.2613 5.89648 77.0344 5.89648C81.7627 5.89648 85.0912 9.47877 85.0912 15.9085C85.0912 19.8626 83.6522 26.1042 76.7982 26.1042C74.3356 26.1042 72.4242 24.7352 71.9387 23.926V32.0004H66.2482V6.37762H71.9737V8.0791V8.07472ZM75.814 10.3361C74.7818 10.3361 73.7102 10.7472 72.8966 11.7795C72.083 12.7767 71.7156 14.3251 71.7156 16.0091C71.7156 18.2792 72.3805 19.6526 73.0803 20.4443C73.7364 21.1835 74.7074 21.6078 75.6303 21.6078C78.3991 21.6078 79.6194 18.6904 79.6194 15.8691C79.6194 13.4985 78.9196 10.9878 76.5882 10.4367C76.3302 10.3667 76.0721 10.3317 75.814 10.3317V10.3361Z" fill="#101C2F"/>
+                                       <path d="M26.7376 0H5.27017C2.36148 0 0.00390625 2.35757 0.00390625 5.26627V26.7381C0.00390625 29.6468 2.36148 32.0044 5.27017 32.0044H26.742C29.6507 32.0044 32.0083 29.6468 32.0083 26.7381V5.26627C32.0083 2.35757 29.6507 0 26.742 0H26.7376Z" fill="url(#ot-logo-gradient-background)"/>
+                                       <path d="M22.4778 13.6466C22.4778 13.4629 22.6309 13.3098 22.8146 13.3098H24.5861C24.6998 13.3098 24.8048 13.253 24.8704 13.1567L26.2176 11.0747C26.3663 10.8517 26.2045 10.5542 25.9333 10.5542H22.8409C22.6528 10.5542 22.5041 10.4011 22.5041 10.2174V8.09605C22.5041 7.90797 22.351 7.75488 22.1673 7.75488H18.9393C18.7512 7.75488 18.6025 7.90797 18.6025 8.09168V13.9965C17.4653 11.8139 15.182 10.318 12.5533 10.318C8.78729 10.318 5.73425 13.3711 5.73425 17.1371C5.73425 20.9031 8.78729 23.9561 12.5533 23.9561C15.1908 23.9561 17.474 22.4602 18.6112 20.2688C18.6287 21.2311 18.725 21.9878 19.1667 22.6395C20.0065 23.8642 21.4849 23.9386 22.8365 23.9386C23.4663 23.9386 23.9344 23.8817 24.6123 23.7768C24.7785 23.7505 24.901 23.6062 24.901 23.44V21.0211C24.901 20.8287 24.7435 20.6756 24.5511 20.6844L23.5013 20.7237C22.456 20.7237 22.4822 20.037 22.4822 19.2191V13.6466H22.4778ZM12.5533 20.1988C10.8649 20.1988 9.4915 18.8298 9.4915 17.1371C9.4915 15.4443 10.8606 14.0753 12.5533 14.0753C14.246 14.0753 15.6151 15.4443 15.6151 17.1371C15.6151 18.8298 14.246 20.1988 12.5533 20.1988Z" fill="white"/>
+                                    </g>
+                                    <defs>
+                                       <linearGradient id="ot-logo-gradient-background" x1="24.3932" y1="26.6681" x2="5.13458" y2="2.17824" gradientUnits="userSpaceOnUse">
+                                          <stop offset="0" stop-color="#00008B"/>
+                                          <stop offset="1" stop-color="#1A6AFF"/>
+                                       </linearGradient>
+                                       <clipPath id="ot-logo-clip-path">
+                                          <rect width="199.742" height="32" fill="white"/>
+                                       </clipPath>
+                                    </defs>
+                                 </svg>
+                                 <span class="sr-only">OpenText home page.</span>
+                              </a>
+                              <nav class="sitenav-right navbar ml-auto" aria-label="Utility navigation">
+                                 <a class="nav-link d-flex text-body" href="https://searchopentext.com"><span class="sr-only">Search OpenText</span></a>
+                                 <a href="#" class="nav-link d-flex text-body" data-toggle="modal" data-target="#language-modal"><span class="sr-only">Choose your country</span></a>
+                                 <a class="btn btn-primary-gr btn-sm" href="https://www.opentext.com/contact">Contact</a>
+                              </nav>
+                           </div>
+                        </div>
+                     </header>
+                  </div>
+
+                  <div class="iw_component" id="iw_comp1744319528778">
+                     <section class="section section-light-down section-top section-trim-bottom">
+                        <div class="container">
+                           <div class="row row-cols-1 row-cols-lg-2">
+                              <div class="col">
+                                 <header class="section-header section-header-lg">
+                                    <div class="section-header-eyebrow">Industry Solutions</div>
+                                    <h1 class="section-header-title">Government industry solutions</h1>
+                                    <p class="section-header-subtitle mb-4 mb-md-6">Reimagine your mission with government-secure information management</p>
+                                    <div class="gap gap-tight">
+                                       <a class="btn btn-primary" target="_blank" href="/media/guide/smarter-guide-to-information-management-in-the-public-sector-with-opentext-en.pdf">Download the smarter government guide</a>
+                                       <a class="btn btn-outline-primary" href="#lang-group-6bb1d8a5-6318-4617-8481-64acf8044459">Contact us</a>
+                                    </div>
+                                 </header>
+                              </div>
+                              <div class="col align-self-end text-center d-none d-lg-block">
+                                 <img class="img-fluid" width="640" height="468" alt="OpenText OT watermark image with a government building in the background" src="/assets/images/products-solutions/solution-industry-category/opentext-image-lp-government-640x468.png">
+                              </div>
+                           </div>
+                        </div>
+                     </section>
+                  </div>
+
+                  <div class="iw_component" id="iw_comp1744319528794">
+                     <nav class="nav-inpage section" aria-label="in page">
+                        <div class="container">
+                           <h2 class="nav-inpage-title">On this page: </h2>
+                           <button class="nav-inpage-btn btn btn-down" type="button" data-toggle="collapse" data-target="#nav-inpage-target" aria-expanded="false" aria-controls="nav-inpage-target">On this page</button>
+                           <div id="nav-inpage-target" class="collapse">
+                              <ul class="nav-inpage-list">
+                                 <li><a href="#innovations">Innovations</a></li>
+                                 <li><a href="#market-solutions">Market solutions</a></li>
+                                 <li><a href="#more-solutions">More solutions</a></li>
+                                 <li><a href="#learn-more">Learn more</a></li>
+                                 <li><a href="#resources">Resources</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </nav>
+                  </div>
+
+                  <div class="iw_component" id="iw_comp1744319528804">
+                     <section class="section">
+                        <div class="container">
+                           <p class="lead text-center mb-0">Certifications</p>
+                           <ul class="row flex-wrap justify-content-center gap-responsive">
+                              <li class="w-33 w-sm-auto"><img class="aspect-ratio-logo img-fluid" width="192" height="127" src="/assets/images/products-solutions/solution-industry-category/opentext-image-government-certifications-IRAP-416x274-en.png" alt="IRAP logo"></li>
+                              <li class="w-33 w-sm-auto"><img class="aspect-ratio-logo img-fluid" width="192" height="127" src="/assets/images/products-solutions/solution-industry-category/opentext-image-government-certifications-fedramp-416x274-en.png" alt="FedRAMP logo"></li>
+                              <li class="w-33 w-sm-auto"><img class="aspect-ratio-logo img-fluid" width="192" height="127" src="/assets/images/products-solutions/solution-industry-category/opentext-image-government-certifications-Canada-flag-416x274-en.png" alt="Canadian flag"></li>
+                           </ul>
+                        </div>
+                     </section>
+                  </div>
+
+                  <div class="iw_component" id="iw_comp1744319528814">
+                     <section class="section" id="innovations">
+                        <div class="container">
+                           <header class="section-header section-header-sub">
+                              <div class="section-header-body">
+                                 <h2 class="section-header-title">Discover our government industry solution innovations</h2>
+                              </div>
+                           </header>
+                           <div class="row row-cols-1 row-cols-xl-3 row-gap-extra-responsive">
+                              <div class="col">
+                                 <img class="img-fluid rounded mb-2 mb-xl-3" src="/assets/images/products-solutions/solution-industry-category/opentext-image-government-innovations-card-2-v2-416x234-en.png" width="720" height="404" alt="Hands gesturing in front of a laptop screen">
+                                 <h3 class="card-title">AI for government</h3>
+                                 <p>Discover a range of AI solutions designed to meet agencies where they are—from getting documents ready for AI with intelligent capture and auto-tagging to advanced analytics that include enterprise search across siloed information databases.</p>
+                                 <a class="more font-weight-bold" target="_blank" href="/media/point-of-view/data-isnt-enough-government-ai-requires-enterprise-knowledge-pov-en.pdf">Get the point of view</a>
+                              </div>
+                              <div class="col">
+                                 <img class="img-fluid rounded mb-2 mb-xl-3" src="/assets/images/products-solutions/solution-industry-category/opentext-image-government-innovations-card-3-416x234-en.png" width="720" height="404" alt="A person holding an ipad with holographic cloud icons around it">
+                                 <h3 class="card-title">Public sector cloud solutions</h3>
+                                 <p>Explore a collection of government IT solutions authorized by government to run securely in the cloud. See the wide variety of <a href="/solutions/fedramp-authorized">FedRAMP-authorized solutions</a> and others designed for sovereign cloud requirements set by Canada (Protected B).</p>
+                                 <a class="more font-weight-bold" href="/solutions/industry/public-sector">See public sector solutions</a>
+                              </div>
+                              <div class="col">
+                                 <img class="img-fluid rounded mb-2 mb-xl-3" src="/assets/images/products-solutions/solution-industry-category/opentext-image-government-innovations-card-1-416x234-en.png" width="720" height="404" alt="A person standing in front of a building holding a tablet/ipad">
+                                 <h3 class="card-title">Total citizen experience</h3>
+                                 <p>Restore constituent trust with more effective and satisfying end-to-end government service delivery. Explore customer communications, digital asset management, and content management solutions—all working together to provide government an integrated, value-driven solution.</p>
+                                 <a class="more font-weight-bold" href="/solutions/experience-platform-for-cities">See total citizen experience solutions</a>
+                              </div>
+                           </div>
+                        </div>
+                     </section>
+                  </div>
+
+                  <div class="iw_component" id="iw_comp1744319528821">
+                     <section class="section" id="market-solutions">
+                        <div class="container">
+                           <header class="section-header section-header-sub">
+                              <div class="section-header-body">
+                                 <h2 class="section-header-title">Discover government market solutions</h2>
+                              </div>
+                           </header>
+                           <div class="row row-gap">
+                              <div class="col-12 col-lg-3">
+                                 <h3 class="h4 mb-3 mb-md-4">Defense and intelligence</h3>
+                                 <p>National security agencies need a secure content management solution to optimize data usage and mitigate risk. Securely deliver information to warfighters when and where it is needed.</p>
+                                 <a class="btn btn-primary mb-3 mb-md-4" href="/solutions/industry/defense-and-intelligence">Explore defense and intelligence solutions</a>
+                              </div>
+                              <div class="col-12 col-lg-9">
+                                 <div class="row row-cols-1 row-cols-md-2">
+                                    <div class="col mb-3">
+                                       <div class="card shadow-sm">
+                                          <img class="img-fluid w-100" width="304" height="192" src="/assets/images/products-solutions/solution-industry-category/opentext-image-government-market-solutions-defense-and-intelligence-card-1-304x192-en.png" alt="A fighter jet in the air from front angle">
+                                          <div class="card-body p-2">
+                                             <h3 class="h6 mb-1">Navigating the technological frontier in aerospace and defense</h3>
+                                             <a class="text-sm more more-bold" target="_blank" href="/media/point-of-view/navigating-the-technological-frontier-in-aerospace-and-defense-pov-en.pdf">Get the point-of-view paper</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col mb-3">
+                                       <div class="card shadow-sm">
+                                          <img class="img-fluid w-100" width="304" height="192" src="/assets/images/products-solutions/solution-industry-category/opentext-image-government-market-solutions-defense-and-intelligence-card-2-304x192-en.png" alt="Two people discussing something while looking at a monitor screen">
+                                          <div class="card-body p-2">
+                                             <h3 class="h6 mb-1">5 ways the defense and intelligence sector can gain an information advantage</h3>
+                                             <a class="text-sm more more-bold" target="_blank" href="/assets/documents/en-US/pdf/opentext-ebk-5-ways-opentext-delivers-an-information-advantage-to-the-global-defense-and-intelligence-sector-en.pdf">Get the ebook</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </section>
+                  </div>
+
+                  <div class="iw_component" id="iw_comp1744319528851">
+                     <section class="section" id="more-solutions">
+                        <div class="container">
+                           <header class="section-header section-header-sub">
+                              <div class="section-header-body">
+                                 <h2 class="section-header-title">Explore more solutions</h2>
+                              </div>
+                           </header>
+                           <div class="row">
+                              <div class="col-md-4 col-lg-3">
+                                 <ul class="nav nav-slider nav-slider-vertical flex-column">
+                                    <li class="nav-item"><a class="nav-link active" href="#tab_labelb009dd751">Government recordkeeping</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#tab_labelb009dd752">IT management platform</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#tab_labelb009dd753">Government-specific professional services</a></li>
+                                 </ul>
+                              </div>
+                              <div class="col-md-8">
+                                 <div id="tab_labelb009dd751">
+                                    <h3 class="card-title-sm">Digital recordkeeping for government</h3>
+                                    <p>Intelligently scan, sort, and digitize paper records into workflows compliant with strict government requirements.</p>
+                                    <a class="btn btn-primary" target="_blank" href="/assets/documents/en-US/pdf/opentext-pp-what-every-government-agency-can-learn-from-the-defense-departments-records-strategy-en.pdf">Get the position paper</a>
+                                    <ul class="list-unstyled list-space-lg mt-4">
+                                       <li>
+                                          <h3 class="h5 mb-1"><a class="more" href="/products/content-management-for-government">Manage public sector records with compliance</a></h3>
+                                          <p class="text-sm">Consolidate government document management with OpenText™ Content Management for Government, now authorized on FedRAMP and Protected B</p>
+                                       </li>
+                                       <li>
+                                          <h3 class="h5 mb-1"><a class="more" href="/products/ai-and-analytics">Predict, act, and win with real-time analytics</a></h3>
+                                          <p class="text-sm">Leverage a smarter data platform with OpenText™ Analytics Cloud</p>
+                                       </li>
+                                       <li>
+                                          <h3 class="h5 mb-1"><a class="more" href="/products/information-archiving">Free up IT spending through archiving</a></h3>
+                                          <p class="text-sm">Sunset legacy applications without losing data using OpenText information archiving</p>
+                                       </li>
+                                       <li>
+                                          <h3 class="h5 mb-1"><a class="more" href="/products/process-automation">Maximize efficiency with AI-powered automation</a></h3>
+                                          <p class="text-sm">Streamline operations using OpenText™ Process Automation software, now authorized on FedRAMP</p>
+                                       </li>
+                                       <li>
+                                          <h3 class="h5 mb-1"><a class="more" href="/products/capture-intelligent-document-processing">Boost government efficiency with intelligent capture and AI</a></h3>
+                                          <p class="text-sm">Simplify processing using capture, AI, and automation with OpenText capture and intelligent document processing</p>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <div id="tab_labelb009dd752" class="mt-6">
+                                    <h3 class="card-title-sm">Cloud-secure government IT service management</h3>
+                                    <p>Take a more efficient approach to IT service management, asset management, universal discovery/CMDB, and portfolio and project management.</p>
+                                    <a class="btn btn-primary" target="_blank" href="https://blogs.opentext.com/opentext-helps-u-s-federal-agencies-deliver-itsm-more-securely-with-less-complexity/">Read the blog</a>
+                                 </div>
+                                 <div id="tab_labelb009dd753" class="mt-6">
+                                    <h3 class="card-title-sm">OpenText public sector solutions</h3>
+                                    <p>Rely on an experienced team of OpenText-certified technical consultants that has delivered services and solutions for more than 30 years.</p>
+                                    <a class="btn btn-primary" target="_blank" href="https://otpss.wpengine.com/wp-content/uploads/2023/08/AFRBA-Case-Study.pdf">Case study: Air Force Review Boards Agency</a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </section>
+                  </div>
+
+                  <div class="iw_component" id="iw_comp1744319528858">
+                     <section class="section" id="learn-more">
+                        <div class="container">
+                           <header class="section-header section-header-sub">
+                              <div class="section-header-body">
+                                 <h2 class="section-header-title">Learn more about Government industry solutions</h2>
+                              </div>
+                           </header>
+                           <div class="row row-gap align-items-lg-center">
+                              <div class="col-12 col-lg-6 text-lg-center">
+                                 <figure class="mb-1 mb-md-4 mb-lg-0">
+                                    <img class="figure-img img-fluid" alt="" src="https://play.vidyard.com/CjQHPCJYQuDYJ7AANzvckz.jpg">
+                                    <figcaption class="figure-caption text-center">See how FedRAMP-authorized government solutions deliver next-level citizen services</figcaption>
+                                 </figure>
+                              </div>
+                              <div class="col-12 col-lg-5 offset-lg-1">
+                                 <p>Discover FedRAMP-authorized solutions for enterprise content management, process automation, and case management from OpenText™ Cloud for Government. Watch this video and learn how you can enable comprehensive content management while strengthening security, compliance, and control.</p>
+                              </div>
+                           </div>
+                        </div>
+                     </section>
+                  </div>
+
+                  <div class="iw_component" id="iw_comp1744319528859">
+                     <section class="section" id="resources">
+                        <div class="container">
+                           <header class="section-header section-header-sub">
+                              <div class="section-header-body">
+                                 <h2 class="section-header-title">Resources</h2>
+                              </div>
+                           </header>
+                           <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+                              <div class="col mb-4">
+                                 <div class="card card-body shadow p-2 p-xl-3">
+                                    <img class="img-fluid mb-2" src="/assets/images/products-solutions/solution-industry-category/opentext-image-government-resources-logo-US-Air-Force-v2-304x192-en.png" alt="United States Air Force logo">
+                                    <h3 class="card-title-sm mb-1">US Air Force shifted security left into the DevSecOps application lifecycle</h3>
+                                    <a href="/customers/united-states-air-force"><span class="more more-bold">Learn more</span></a>
+                                 </div>
+                              </div>
+                              <div class="col mb-4">
+                                 <div class="card card-body shadow p-2 p-xl-3">
+                                    <img class="img-fluid mb-2" src="/assets/images/products-solutions/solution-industry-category/1750791619377_opentext-image-government-resources-logo-govt-canada-304x192-en.png" alt="Government of Canada logo">
+                                    <h3 class="card-title-sm mb-1">Canadian government can now promote transparency and gain valuable insights</h3>
+                                    <a href="/customers/government-of-canada"><span class="more more-bold">Learn more</span></a>
+                                 </div>
+                              </div>
+                              <div class="col mb-4">
+                                 <div class="card card-body shadow p-2 p-xl-3">
+                                    <img class="img-fluid mb-2" src="/assets/images/resources/customer-success/los-angeles-county-human-resources-department-logo-416x274.png" alt="County of Los Angeles, Department of Human Resources logo">
+                                    <h3 class="card-title-sm mb-1">County of Los Angeles saved millions a year with a digital makeover</h3>
+                                    <a href="/customers/county-of-los-angeles-department-of-human-resources-3"><span class="more more-bold">Learn more</span></a>
+                                 </div>
+                              </div>
+                              <div class="col mb-4">
+                                 <div class="card card-body shadow p-2 p-xl-3">
+                                    <h3 class="card-title-sm mb-1">Data isn’t enough: Government AI requires enterprise knowledge</h3>
+                                    <a target="_blank" href="/media/point-of-view/data-isnt-enough-government-ai-requires-enterprise-knowledge-pov-en.pdf"><span class="more more-bold">Read the point of view</span></a>
+                                 </div>
+                              </div>
+                              <div class="col mb-4">
+                                 <div class="card card-body shadow p-2 p-xl-3">
+                                    <h3 class="card-title-sm mb-1">FedRAMP authorized: OpenText solutions help government agencies achieve objectives</h3>
+                                    <a target="_blank" href="https://blogs.opentext.com/fedramp-authorized-opentext-solutions-help-government-agencies-achieve-mission-critical-objectives/"><span class="more more-bold">Read the blog</span></a>
+                                 </div>
+                              </div>
+                              <div class="col mb-4">
+                                 <div class="card card-body shadow p-2 p-xl-3">
+                                    <h3 class="card-title-sm mb-1">OpenText Cloud for Government solution achieves FedRAMP authorization</h3>
+                                    <a href="https://www.opentext.com/about/press-releases/opentext-cloud-for-government-solution-achieves-fedramp-authorization"><span class="more more-bold">Read the press release</span></a>
+                                 </div>
+                              </div>
+                           </div>
+                           <a class="btn btn-primary" href="/customers">See more success stories</a>
+                        </div>
+                     </section>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="container-fluid iw_section" id="sectionktsn8chm">
+            <div class="row iw_row iw_stretch">
+               <div class="iw_columns col-lg-12">
+                  <div class="iw_component" id="iw_comp1744319528861">
+                     <section id="interactive-lead-conversation" class="section">
+                        <div class="container">
+                           <div class="row">
+                              <div class="col-12 col-xl-3">
+                                 <h2 class="section-header-title">How can we help?</h2>
+                              </div>
+                              <div class="col-12 col-xl-9">
+                                 <ul class="card-layout row row-cols-1 row-cols-lg-3">
+                                    <li class="col mb-3">
+                                       <div class="card shadow-sm">
+                                          <div class="card-body"><a class="stretched-link" href="/about">About OpenText</a></div>
+                                       </div>
+                                    </li>
+                                    <li class="col mb-3">
+                                       <div class="card shadow-sm">
+                                          <div class="card-body"><a class="stretched-link" target="_blank" href="https://blogs.opentext.com/">OpenText Blogs</a></div>
+                                       </div>
+                                    </li>
+                                    <li class="col mb-3">
+                                       <div class="card shadow-sm">
+                                          <div class="card-body"><a class="stretched-link" href="/contact">Contact us</a></div>
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </section>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="container-fluid iw_section" id="sectionkvay5be8">
+            <div class="row iw_row iw_stretch">
+               <div class="iw_columns col-lg-12">
+                  <div class="iw_component" id="iw_comp1635425551087">
+                     <footer class="ot-footer">
+                        <div class="container">
+                           <h2 class="sr-only">OpenText footer</h2>
+                           <nav class="ot-footer__directory" aria-label="site directory">
+                              <div class="row row-cols-1 row-cols-md-3">
+                                 <div class="col">
+                                    <h3>Resources for</h3>
+                                    <ul>
+                                       <li><a href="https://careers.opentext.com/" target="_blank">Careers</a></li>
+                                       <li><a href="https://developer.opentext.com/" target="_blank">Developers</a></li>
+                                       <li><a href="https://investors.opentext.com/home/default.aspx" target="_blank">Investors</a></li>
+                                       <li><a href="/partners/grow-as-a-partner">Partners</a></li>
+                                       <li><a href="/about/supplier-information">Suppliers</a></li>
+                                    </ul>
+                                 </div>
+                                 <div class="col">
+                                    <h3>Corporate overview</h3>
+                                    <ul>
+                                       <li><a href="/about">About us</a></li>
+                                       <li><a href="/about/leadership">Leadership</a></li>
+                                       <li><a href="/about/board-of-directors">Board of Directors</a></li>
+                                       <li><a href="/about/corporate-governance">Corporate governance</a></li>
+                                    </ul>
+                                 </div>
+                                 <div class="col">
+                                    <h3>Contact us</h3>
+                                    <ul>
+                                       <li><a href="/contact">How can we help?</a></li>
+                                       <li><a href="/about/office-locations">Global locations</a></li>
+                                       <li><a href="/support">Customer support</a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </nav>
+                           <p class="ot-footer__copyright"><a href="/about/copyright-information">Copyright</a> © 2026 Open Text Corporation. All Rights Reserved.</p>
+                           <p class="ot-footer__powered-by">Powered by <a href="/products/content-management-system">OpenText™ Web CMS</a></p>
+                        </div>
+                     </footer>
+                  </div>
+               </div>
+            </div>
+         </div>
       </div>
-   </div>
-</header>
+      <script src="https://assets.ot.digital/min/m/v1/js/opentext.min.js"></script>
+   </body>
+</html>
